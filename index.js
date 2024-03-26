@@ -16,7 +16,9 @@ app.use("/user", authController);
 
 app.use("/pdf", PDFController);
 
-
+app.get('/',(req,res)=>{
+ res.json({message:"server running successfully"})
+})
 
 app.listen(process.env.PORT, () => {
   console.log("server connected");
